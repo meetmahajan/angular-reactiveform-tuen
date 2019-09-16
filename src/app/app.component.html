@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Bootstrap Example</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+
+	</script>
+</head>
+
+<body class="reactiveFormBody">
+	<h2>Reactive Form</h2>
+	<div>
+		<a (click)="reactiveForm('formFill')">
+			<button class="btn-primary">
+      Fill the form
+    </button>
+    </a>
+    &nbsp;&nbsp;
+  	<a (click)="reactiveForm('formDetails')">
+		<button class="btn-primary">
+      Form Details
+    </button>
+    </a>
+  </div>
+  <div class='formElement'>
+  <app-reactive-form *ngIf="showFormFill()"></app-reactive-form>
+  </div>
+  <div>
+  <app-form-details *ngIf="showFormDetails()"></app-form-details>
+  </div>
+</body>
+</html>

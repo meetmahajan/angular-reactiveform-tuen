@@ -1,0 +1,10 @@
+p {
+  font-family: Lato;
+}
+body.reactiveFormBody{
+  margin: 15px;
+  padding: 15px;
+}
+div.formElement{
+  padding-top:20px;
+}
