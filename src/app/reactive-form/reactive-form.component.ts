@@ -15,6 +15,12 @@ export class ReactiveFormComponent implements OnInit {
     email: [''],
     mobile: [''],
     designation: [''],
+    address: this.formbuilder.group({
+      street: [''],
+      city: [''],
+      state: [''],
+      zip: ['']
+    })
   });
   constructor(private formbuilder: FormBuilder) {
   }
