@@ -42,10 +42,10 @@
     </label>
   </div>
   <br>
+  <input formControlName="productAdd"/>
+  <button (click)="addProduct(productAdd)" >Add Product</button>
+  <p *ngFor="let p of productArray">
+    {{p}}
+  </p>
   <button class="btn-primary" type="submit" [disabled]="!profile.valid">Submit</button>
-
 </form>
-
-<p *ngIf="toggle">{{profile.value | json}}</p>
-<p>-------------------------------------</p>
-<p *ngIf="toggle">{{profile.value.address.city | json}}</p>

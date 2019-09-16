@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
-import { FormArray } from '@angular/forms';
+// import { FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-form',
@@ -9,6 +9,7 @@ import { FormArray } from '@angular/forms';
   styleUrls: ['./reactive-form.component.css']
 })
 export class ReactiveFormComponent implements OnInit {
+  productArray = [];
   toggle = false;
   profile = this.formbuilder.group({
     name: ['', Validators.required],
@@ -25,6 +26,9 @@ export class ReactiveFormComponent implements OnInit {
   constructor(private formbuilder: FormBuilder) {
   }
   ngOnInit() {
+  }
+  addProduct(product){
+    this.productArray.push(product);
   }
   onSubmit() {
     // TODO: Use EventEmitter with form value
