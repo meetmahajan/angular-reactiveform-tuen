@@ -1,0 +1,26 @@
+<form [formGroup]="profile" (ngSubmit)="onSubmit()">
+	<label>
+    Name :
+    <input type="text" formControlName="name" required>
+  </label>
+
+  <label>
+    Email :
+    <input type="email" formControlName="email">
+  </label>
+
+    <label>
+    Mobile Number :
+    <input type="text" formControlName="mobile">
+  </label>
+
+    <label>
+    Designation :
+    <input type="text" formControlName="designation">
+  </label>
+  <br>
+  <button class="btn-primary" type="submit" [disabled]="!profile.valid">Submit</button>
+
+</form>
+
+<p *ngIf="toggle">{{profile.value | json}}</p>
